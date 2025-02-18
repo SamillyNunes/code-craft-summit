@@ -1,7 +1,13 @@
+import Button from "@/components/button";
+import { ArrowRight } from "lucide-react";
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <Button >
+        Enviar
+        <ArrowRight/>
+      </Button>
     </main>
   );
 }

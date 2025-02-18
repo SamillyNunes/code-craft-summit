@@ -3,6 +3,7 @@
 /* 
 - o "--color-*: initial" vai indicar que o tailwind so pode usar essas cores 
 - quando indicamos "--font-sans", para o tailwind sera considerado a fonte padrao
+- "rounded-xl" vai sobrescrever o valor que o tailwind da
 */
 @theme {
     --color-*: initial; 
@@ -23,4 +24,6 @@
 
     --font-heading: var(--font-oxanium);
     --font-sans: var(--font-montserrat);
+
+    --radius-xl: 0.625rem;
 }
