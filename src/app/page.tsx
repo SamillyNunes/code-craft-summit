@@ -1,5 +1,6 @@
 import Button from "@/components/button";
-import { ArrowRight } from "lucide-react";
+import IconButton from "@/components/icon_button";
+import { ArrowRight, CopyIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -8,6 +9,10 @@ export default function Home() {
         Enviar
         <ArrowRight/>
       </Button>
+
+      <IconButton>
+        <CopyIcon/>
+      </IconButton>
     </main>
   );
 }
