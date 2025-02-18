@@ -1,10 +1,9 @@
-import { IconButton } from '@/components/icon_button';
 import { InfoCard } from '@/components/info_card';
-import { InputField, InputIcon, InputRoot } from '@/components/input';
-import { BadgeCheck, Copy, Link, Medal, MousePointerClick } from 'lucide-react';
+import { BadgeCheck, Medal, MousePointerClick } from 'lucide-react';
 import Image from 'next/image';
 
 import logo from '../../assets/logo.svg';
+import { InviteLinkInput } from './invite_link_input';
 import { Ranking } from './ranking';
 
 export default function InvitePage() {
@@ -34,20 +33,7 @@ export default function InvitePage() {
 						</p>
 					</div>
 
-					<InputRoot>
-						<InputIcon>
-							<Link className="size-5" />
-						</InputIcon>
-
-						<InputField
-							defaultValue={'http://localhost:3000/invite/64841262se62'}
-							readOnly
-						/>
-
-						<IconButton className="-mr-2">
-							<Copy className="size-5" />
-						</IconButton>
-					</InputRoot>
+					<InviteLinkInput />
 
 					<div className="grid gap-3 md:grid-cols-3">
 						<InfoCard
