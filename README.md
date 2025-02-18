@@ -5,6 +5,8 @@ Esse projeto visa criar uma aplicação para inscrever usuários em um evento, o
 ## Screenshots
 
 ![image](https://github.com/user-attachments/assets/b9202188-f348-48dc-b5d2-a084e706e050)
+![image](https://github.com/user-attachments/assets/c83175cc-49e6-4455-97ed-1ad492b3a45c)
+
 
 ## Execução
 
