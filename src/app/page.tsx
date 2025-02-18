@@ -1,7 +1,7 @@
 import { Button } from "@/components/button";
 import { IconButton } from "@/components/icon_button";
-import { Input } from "@/components/input";
-import { ArrowRight, CopyIcon } from "lucide-react";
+import { InputField, InputIcon, InputRoot } from "@/components/input";
+import { ArrowRight, CopyIcon, MailIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -16,8 +16,14 @@ export default function Home() {
       </IconButton>
 
       <div>
-        <Input type="email" placeholder="Digite seu e-mail" />
-        <Input type="email" placeholder="Digite seu e-mail" error />
+        {/* tecnica do composition pattern: da mais flexibilidade e escalabilidade */}
+        <InputRoot>
+          <InputIcon>
+            <MailIcon size={20} />
+          </InputIcon>
+
+          <InputField placeholder="Digite o email" />
+        </InputRoot>
       </div>
     </main>
   );
