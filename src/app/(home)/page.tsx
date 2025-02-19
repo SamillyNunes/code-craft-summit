@@ -1,7 +1,7 @@
 import { Radio } from 'lucide-react';
 import Image from 'next/image';
 import logo from '../../assets/logo.svg';
-import { SubscritionForm } from './subscrition_form';
+import { SubscriptionForm } from './subscription_form';
 
 // quando criamos, no Next.js, uma pasta com o nome dentro de parenteses, o next não interpreta como
 // um caminho de endpoint. Ato feito para organizacao
@@ -41,7 +41,7 @@ export default function Home() {
 					</p>
 				</div>
 
-				<SubscritionForm />
+				<SubscriptionForm />
 			</div>
 		</div>
 	);

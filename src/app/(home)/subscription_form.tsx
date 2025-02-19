@@ -14,7 +14,7 @@ const subscriptionSchema = z.object({
 
 type SubscriptionSchema = z.infer<typeof subscriptionSchema>;
 
-export function SubscritionForm() {
+export function SubscriptionForm() {
 	const {
 		register,
 		handleSubmit,
