@@ -1,5 +1,8 @@
 import { InfoCard } from '@/components/info_card';
-import { getSubscriberInviteClicks } from '@/http/api';
+import {
+	getSubscriberInviteClicks,
+	getSubscriberInviteCount,
+} from '@/http/api';
 import { BadgeCheck, Medal, MousePointerClick } from 'lucide-react';
 
 interface StatsProps {
@@ -7,16 +10,21 @@ interface StatsProps {
 }
 
 export async function Stats({ subscriberId }: StatsProps) {
-	const { count } = await getSubscriberInviteClicks(subscriberId);
+	const { count: inviteClicks } = await getSubscriberInviteClicks(subscriberId);
+	const { count: inviteCount } = await getSubscriberInviteCount(subscriberId);
 
 	return (
 		<div className="grid gap-3 md:grid-cols-3">
 			<InfoCard
-				value={count.toString()}
+				value={inviteClicks.toString()}
 				label="Acessos ao link"
 				icon={MousePointerClick}
 			/>
-			<InfoCard value="432" label="Inscrições feitas" icon={BadgeCheck} />
+			<InfoCard
+				value={inviteCount.toString()}
+				label="Inscrições feitas"
+				icon={BadgeCheck}
+			/>
 			<InfoCard value="3°" label="Posição no ranking" icon={Medal} />
 		</div>
 	);
