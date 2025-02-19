@@ -1,10 +1,9 @@
-import { InfoCard } from '@/components/info_card';
-import { BadgeCheck, Medal, MousePointerClick } from 'lucide-react';
 import Image from 'next/image';
 
 import logo from '../../../assets/logo.svg';
 import { InviteLinkInput } from './invite_link_input';
 import { Ranking } from './ranking';
+import { Stats } from './stats';
 
 interface InvitePageProps {
 	params: Promise<{
@@ -45,15 +44,7 @@ export default async function InvitePage(props: InvitePageProps) {
 
 					<InviteLinkInput inviteLink={inviteLink} />
 
-					<div className="grid gap-3 md:grid-cols-3">
-						<InfoCard
-							value="1042"
-							label="Acessos ao link"
-							icon={MousePointerClick}
-						/>
-						<InfoCard value="432" label="Inscrições feitas" icon={BadgeCheck} />
-						<InfoCard value="3°" label="Posição no ranking" icon={Medal} />
-					</div>
+					<Stats subscriberId={subscriberId} />
 				</div>
 			</div>
 
