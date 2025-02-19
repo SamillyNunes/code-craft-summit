@@ -28,7 +28,7 @@ export async function Stats({ subscriberId }: StatsProps) {
 				icon={BadgeCheck}
 			/>
 			<InfoCard
-				value={`${position?.toString()}°` || '-'}
+				value={position !== null ? `${position?.toString()}°` : '-'}
 				label="Posição no ranking"
 				icon={Medal}
 			/>
