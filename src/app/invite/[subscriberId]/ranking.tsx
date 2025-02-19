@@ -1,6 +1,6 @@
-import medalCooper from '../../assets/medal_cooper.svg';
-import medalGold from '../../assets/medal_gold.svg';
-import medalSilver from '../../assets/medal_silver.svg';
+import medalCooper from '../../../assets/medal_cooper.svg';
+import medalGold from '../../../assets/medal_gold.svg';
+import medalSilver from '../../../assets/medal_silver.svg';
 import { RankingCard } from './ranking_card';
 
 export function Ranking() {
